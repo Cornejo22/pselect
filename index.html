@@ -17,6 +17,13 @@
 		border-bottom: 1px solid #c9c9c9;
 	}
 	
+	img {
+		position: absolute;
+		top: 0;
+		right: 0;
+		border: 0;
+	}
+	
 	header,
 	main,
 	footer {
@@ -38,6 +45,9 @@
 		<a href="https://raw.githubusercontent.com/IagoLast/pselect/master/data/municipios.json">Listado de municipios</a>
 		<a href="https://raw.githubusercontent.com/IagoLast/pselect/master/data/provincias.json">Listado de provincias</a>
 	</footer>
+	<a href="https://github.com/IagoLast/Pselect">
+		<img src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub">
+	</a>
 </body>
 <script>
 var prov = document.getElementById('ps-prov');
@@ -45,6 +55,10 @@ var mun = document.getElementById('ps-mun');
 // Create PS
 Pselect().create(prov, mun);
 
+document.getElementById('ps-prov').value = "36";
+var evt = document.createEvent("HTMLEvents");
+evt.initEvent("change", false, true);
+document.getElementById('ps-prov').dispatchEvent(evt);
 
 document.getElementById('ps-mun').addEventListener('change', function() {
 	document.getElementById('code').innerHTML = 'Código: ' + document.getElementById('ps-mun').value;
