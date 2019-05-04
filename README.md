@@ -1,10 +1,10 @@
 # PSelect.js
 
-Libreria javascript para rellenar selects con las provincias y municipios Españoles de forma 
+Libreria javascript para rellenar selects con las provincias y municipios Españoles de forma sencilla.
 
 ## Instalacion
 
-###CommonJs
+### CommonJs
 
 	npm install --save pselect.js
 
